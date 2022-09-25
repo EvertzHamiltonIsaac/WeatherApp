@@ -30,7 +30,7 @@ ul span {
 
 body {
     font-family: 'Heebo', sans-serif;
-    background-image: url('./assets/francesco-ungaro-auG6mA5tnrY-unsplash.jpg');
+    background-image: url(./assets/francesco-ungaro-auG6mA5tnrY-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
