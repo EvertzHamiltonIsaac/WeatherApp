@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap');
+
+:root {
+    --BG-img: "./img/francesco-ungaro-auG6mA5tnrY-unsplash.jpg";
+    --f_light: 300;
+    --f_regular: 400;
+    --f_regular-bold: 500;
+    --f_bold: 700;
+
+    --color_black_blue: #15133C;
+    --color_gray: #73777B;
+    --color_white_light: #F1EEE9;
+    --color_orange: #EC994B
+}
+
+ul {
+    list-style: none;
+}
+
+
+ul span {
+    font-weight: var(--f_regular-bold);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background-image: url('./img/francesco-ungaro-auG6mA5tnrY-unsplash.jpg');
+    background-size: cover;
+}
+
+.mainWeather {
+    width: 450px;
+    height: 450px;
+    border-radius: 1em;
+    overflow: hidden;
+
+
+}
+
+
+.weatherContainer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color_white_light);
+
+
+}
+
+.weatherTittle {
+    padding: 10px;
+    text-align: center;
+    height: 20%;
+}
+
+.weatherBody {
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    padding: 10px;
+}
+
+.sectionWeatherImg {
+    background-color: var(--color_black_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    width: 100%;
+}
+
+.sectionWeatherImg img {
+    width: 100%;
+}
+
+.sectionWeatherText {
+    background-color: var(--color_orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.weatherFooter {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.weatherFooter p {
+    font-size: 20px;
+    font-weight: var(--f_bold);
+}
+
+.weatherFooter button {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5em;
+    background-color: var(--color_orange);
+
+    transition: transform 0.4s;
+}
+
+.weatherFooter button:hover {
+    transform: scale(1.05);
+}
+
+/*! this is the style of the loading page -- Implementacion de codigo Externo */
+/*! ('Referencia de: 'https://loading.io/css/' ') */
+
+.lds-heart {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+}
+
+.lds-heart div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+    0% {
+        transform: scale(0.95);
+    }
+
+    5% {
+        transform: scale(1.1);
+    }
+
+    39% {
+        transform: scale(0.85);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
